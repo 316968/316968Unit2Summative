@@ -36,6 +36,7 @@ namespace _316968_Unit2Summative
             InitializeComponent();
             try
             {
+                // creates a placeholder contact, needed to read the file.
                 Contact contactPlaceholder = new Contact("temp", "temp", 0, 0, 0, "temp");
                 string[] contactinfo = contactPlaceholder.ReadFromFile();
                 txtFirstName.Text = contactinfo[0];
@@ -50,7 +51,7 @@ namespace _316968_Unit2Summative
             }
             catch
             {
-                MessageBox.Show("Sorry! NO INFORMATION FOUND, file missing >:(");
+                MessageBox.Show("No information found in file, or file missing");
             }
         }
 
@@ -64,12 +65,12 @@ namespace _316968_Unit2Summative
                 int.TryParse(txtDay.Text, out Day);
                 int.TryParse(txtMonth.Text, out Month);
                 int.TryParse(txtYear.Text, out Year);
-                
+                //contact info user enters in text boxes
                 Contact contactCurrent = new Contact(txtFirstName.Text, txtLastName.Text, Day, Month, Year, txtEmail.Text);
-                
+                //gets age 
                 contactCurrent.getAge();
                 
-                //contact.sw.WriteLine(contact.temp);
+                
             }
             catch(Exception ex)
             {
@@ -84,16 +85,13 @@ namespace _316968_Unit2Summative
             int.TryParse(txtDay.Text, out Day);
             int.TryParse(txtMonth.Text, out Month);
             int.TryParse(txtYear.Text, out Year);
+            //saves the info to the textfile
             Contact contactClosed = new Contact(txtFirstName.Text, txtLastName.Text, Day, Month, Year, txtEmail.Text);
             contactClosed.SaveToFile();
         }
 
 
-        /*private void btnAge_Click(object sender, RoutedEventArgs e)
-{
-
-}*/
-
-        /// do a thing where when the user enters info it checks if its already been added, and in the catch statement it runs the show age thing
+       
+        
     }
 }
