@@ -17,7 +17,5 @@
         <TextBox x:Name="txtYear" Text="Year" Canvas.Left="247" Canvas.Top="50" MaxLength="4"/>
         <Label x:Name="lblYear" Content="year" RenderTransformOrigin="1.312,2.077" Canvas.Left="210" Canvas.Top="46"/>
         <Button x:Name="btnContact" Content="Add Contact,show age. close the window to save the info after entering it and pressing this button." Click="btnContact_Click" Canvas.Top="132"/>
-        <!-- <Button x:Name="btnRead" Content="Read contact from file" Click="btnRead_Click" Canvas.Left="125" Canvas.Top="132"/>-->
-        <!--<Button x:Name="btnAge" Content="Show Age" Click="btnAge_Click" Canvas.Left="250" Canvas.Top="132"/>-->
     </Canvas>
 </Window>
